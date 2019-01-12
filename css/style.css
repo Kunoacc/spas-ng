@@ -223,6 +223,7 @@
 
 input::placeholder {
     font-weight: 200;
+    color: var(--secondary) !important
 }
 
 a{
@@ -255,6 +256,9 @@ a:hover{
     .detail-section{
         min-height: 1000px;
     }
+    .display-4{
+        font-size: 2.5rem;
+    }
 }
 
 @media (min-width:576px) {
@@ -271,6 +275,9 @@ a:hover{
     }
     .detail-section{
         min-height: 800px;
+    }
+    .display-4{
+        font-size: 3.2rem;
     }
 }
 
@@ -289,6 +296,10 @@ a:hover{
     .detail-section{
         min-height: 500px;
     }
+
+    .display-4{
+        font-size: 3.2rem;
+    }
 }
 
 @media (min-width:992px) {
@@ -304,6 +315,10 @@ a:hover{
     }
     .detail-section{
         min-height: 500px;
+    }
+
+    .display-4{
+        font-size: 3.5rem;
     }
 }
 
@@ -324,7 +339,12 @@ a:hover{
     .nav-item:not(:last-child)>.nav-link {
         border-right: solid 1px var(--primary);
     }
+
     .detail-section{
         min-height: 450px;
+    }
+
+    .display-4{
+        font-size: 3.5rem;
     }
 }
