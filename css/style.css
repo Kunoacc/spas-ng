@@ -1,0 +1,128 @@
+/*
+    TYPOGRAPHY
+*/
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600');
+
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+/*
+    UTILITY CLASSES
+*/
+.f-w-200 {
+    font-weight: 200;
+}
+
+.f-w-300 {
+    font-weight: 300;
+}
+
+.f-w-400 {
+    font-weight: 400;
+}
+
+.f-w-600 {
+    font-weight: 600;
+}
+
+:root {
+    --primary: #3F6279;
+    --accent: #E15E87;
+    --secondary: #cecccc;
+}
+
+.bg-gradient {
+    background: linear-gradient(90deg, var(--accent) 50%, var(--primary) 70%)
+}
+
+.rounded-corners {
+    border-radius: 50px;
+}
+
+.header-lg {
+    height: 600px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-alternate {
+    background: white;
+    color: var(--primary);
+}
+
+.text-shadow {
+    text-shadow: rgba(0, 0, 0, 0.7) 1px 2px .5rem;
+}
+
+.vertically-center {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.vertically-inverted {
+    transform: translateY(-50%);
+}
+
+
+/*
+    MODIFICATIONS
+*/
+.nav-item {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+[class*=secondary]:not(*.text-secondary) {
+    color: var(--secondary);
+}
+
+.nav-item:not(:last-child)>.nav-link {
+    border-right: solid 1px var(--primary);
+    padding-right: 15px;
+}
+
+.nav-item.active>.nav-link {
+    color: var(--primary) !important;
+}
+
+input::placeholder {
+    font-weight: 200;
+}
+
+
+
+/*
+    MEDIA QUERIES
+*/
+@media (min-width:576px) {
+    .vertically-inverted {
+        transform: translateY(0);
+    }
+}
+
+@media (min-width:768px) {
+    .vertically-inverted {
+        transform: translateY(0);
+    }
+}
+
+@media (min-width:992px) {
+    .vertically-inverted {
+        transform: translateY(-200px)
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        max-width: 1200px
+    }
+
+    .vertically-inverted {
+        transform: translateY(-50%);
+    }
+}
