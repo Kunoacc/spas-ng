@@ -1,16 +1,84 @@
-/*
+/*/////////////////
     TYPOGRAPHY
-*/
+//////////////////*/
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600');
 
 * {
     font-family: 'Source Sans Pro', sans-serif;
 }
 
+/*///////////////////
+    CSS VARIABLES
+////////////////// */
 
-/*
+:root {
+    --primary: #3F6279;
+    --accent: #E15E87;
+    --secondary: #cecccc;
+    --main: #986181;
+}
+
+
+/*//////////////////////
     UTILITY CLASSES
-*/
+//////////////////////*/
+.flex-1 {
+    flex: 1 1 0%
+}
+
+.mt-6 {
+    margin-top: 8rem
+}
+
+.ml-6 {
+    margin-left: 8rem
+}
+
+.mr-6 {
+    margin-right: 8rem
+}
+
+.mb-6 {
+    margin-bottom: 8rem
+}
+
+.my-6{
+
+}
+
+.pin {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0
+}
+
+.pin-y {
+    top: 0;
+    bottom: 0
+}
+
+.pin-x {
+    right: 0;
+    left: 0
+}
+
+.pin-t {
+    top: 0
+}
+
+.pin-r {
+    right: 0
+}
+
+.pin-b {
+    bottom: 0
+}
+
+.pin-l {
+    left: 0
+}
+
 .f-w-200 {
     font-weight: 200;
 }
@@ -27,12 +95,6 @@
     font-weight: 600;
 }
 
-:root {
-    --primary: #3F6279;
-    --accent: #E15E87;
-    --secondary: #cecccc;
-}
-
 .bg-gradient {
     background: linear-gradient(90deg, var(--accent) 50%, var(--primary) 70%)
 }
@@ -41,8 +103,42 @@
     border-radius: 50px;
 }
 
+.rounded-corners-left{
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
+.rounded-corners-right{
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+}
+
+.rounded-corners-top{
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.rounded-corners-bottom{
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+
 .header-lg {
     height: 600px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-md {
+    height: 400px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-sm {
+    height: 250px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -68,10 +164,35 @@
     transform: translateY(-50%);
 }
 
+.bg-img{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
-/*
+/*//////////////////////
+    CUSTOM CLASSES
+/////////////////////*/
+
+.navigation-menu::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--light);
+    height: 45px;
+    margin-top: 10px;
+}
+
+.detail-section{
+    min-height: 450px;
+}
+
+
+/*/////////////////////
     MODIFICATIONS
-*/
+////////////////////*/
 .nav-item {
     text-transform: uppercase;
     font-weight: 600;
@@ -98,14 +219,52 @@ input::placeholder {
     font-weight: 200;
 }
 
+a{
+    transition: 0.4s ease;
+}
+
+a:hover{
+    color: var(--accent);
+    text-decoration: none;
+
+}
 
 
-/*
+
+/*////////////////////
     MEDIA QUERIES
-*/
+////////////////////*/
+@media (max-width:575px) {
+    .vertically-inverted {
+        transform: translateY(0);
+    }
+
+    .navigation-menu::before{
+        background: white;
+        height: 40px;
+    }
+    .nav-item:not(:last-child)>.nav-link {
+        border-right: solid 0 transparent;
+    }
+    .detail-section{
+        min-height: 1000px;
+    }
+}
+
 @media (min-width:576px) {
     .vertically-inverted {
         transform: translateY(0);
+    }
+
+    .navigation-menu::before{
+        background: white;
+        height: 40px;
+    }
+    .nav-item:not(:last-child)>.nav-link {
+        border-right: solid 0 transparent;
+    }
+    .detail-section{
+        min-height: 800px;
     }
 }
 
@@ -113,11 +272,32 @@ input::placeholder {
     .vertically-inverted {
         transform: translateY(0);
     }
+    .navigation-menu::before{
+        background: white;
+        height: 40px;
+    }
+    .nav-item:not(:last-child)>.nav-link {
+        border-right: solid 0 transparent;
+    }
+
+    .detail-section{
+        min-height: 500px;
+    }
 }
 
 @media (min-width:992px) {
     .vertically-inverted {
-        transform: translateY(-200px)
+        transform: translateY(-50%)
+    }
+    .navigation-menu::before{
+        background: white;
+        height: 40px;
+    }
+    .nav-item:not(:last-child)>.nav-link {
+        border-right: solid 0 transparent;
+    }
+    .detail-section{
+        min-height: 500px;
     }
 }
 
@@ -128,5 +308,17 @@ input::placeholder {
 
     .vertically-inverted {
         transform: translateY(-50%);
+    }
+
+    .navigation-menu::before{
+        background: var(--light);
+        height: 45px;
+    }
+
+    .nav-item:not(:last-child)>.nav-link {
+        border-right: solid 1px var(--primary);
+    }
+    .detail-section{
+        min-height: 450px;
     }
 }

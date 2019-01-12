@@ -1,5 +1,357 @@
-<section id="hero">
-        <div class="header-lg mt-5 d-flex align-items-center" style="background-image: url('./img/jumbo-header.png')">
+<!doctype html>
+<html lang="en">
+
+
+<style>
+/*
+    TYPOGRAPHY
+*/
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600');
+
+* {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+/*
+    UTILITY CLASSES
+*/
+.pin-none {
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto
+}
+
+.pin {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0
+}
+
+.pin-y {
+    top: 0;
+    bottom: 0
+}
+
+.pin-x {
+    right: 0;
+    left: 0
+}
+
+.pin-t {
+    top: 0
+}
+
+.pin-r {
+    right: 0
+}
+
+.pin-b {
+    bottom: 0
+}
+
+.pin-l {
+    left: 0
+}
+
+.f-w-200 {
+    font-weight: 200;
+}
+
+.f-w-300 {
+    font-weight: 300;
+}
+
+.f-w-400 {
+    font-weight: 400;
+}
+
+.f-w-600 {
+    font-weight: 600;
+}
+
+:root {
+    --primary: #3F6279;
+    --accent: #E15E87;
+    --secondary: #cecccc;
+}
+
+.bg-gradient {
+    background: linear-gradient(90deg, var(--accent) 50%, var(--primary) 70%)
+}
+
+.rounded-corners {
+    border-radius: 50px;
+}
+
+.header-lg {
+    height: 600px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.btn-alternate {
+    background: white;
+    color: var(--primary);
+}
+
+.text-shadow {
+    text-shadow: rgba(0, 0, 0, 0.7) 1px 2px .5rem;
+}
+
+.vertically-center {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.vertically-inverted {
+    transform: translateY(-50%);
+}
+
+.bg-img{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*
+    CUSTOM CLASSES
+*/
+
+.navigation-menu::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: var(--light);
+    height: 45px;
+    margin-top: 10px;
+}
+
+.detail-section{
+    min-height: 450px;
+}
+
+
+/*
+    MODIFICATIONS
+*/
+.nav-item {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.text-secondary{
+    color: var(--secondary) !important;
+}
+
+.border-secondary{
+    border-color: var(--secondary) !important;
+}
+
+.nav-item:not(:last-child)>.nav-link {
+    border-right: solid 1px var(--primary);
+    padding-right: 15px;
+}
+
+.nav-item.active>.nav-link {
+    color: var(--primary) !important;
+}
+
+input::placeholder {
+    font-weight: 200;
+}
+
+
+
+/*
+    MEDIA QUERIES
+*/
+@media (max-width:575px) {
+    .vertically-inverted {
+        transform: translateY(0);
+    }
+
+    .navigation-menu::before{
+        background: white;
+        height: 40px;
+    }
+    .nav-item:not(:last-child)>.nav-link {
+        border-right: solid 0 transparent;
+    }
+    .detail-section{
+        min-height: 1000px;
+    }
+}
+
+@media (min-width:576px) {
+    .vertically-inverted {
+        transform: translateY(0);
+    }
+
+    .navigation-menu::before{
+        background: white;
+        height: 40px;
+    }
+    .nav-item:not(:last-child)>.nav-link {
+        border-right: solid 0 transparent;
+    }
+    .detail-section{
+        min-height: 800px;
+    }
+}
+
+@media (min-width:768px) {
+    .vertically-inverted {
+        transform: translateY(0);
+    }
+    .navigation-menu::before{
+        background: white;
+        height: 40px;
+    }
+    .nav-item:not(:last-child)>.nav-link {
+        border-right: solid 0 transparent;
+    }
+
+    .detail-section{
+        min-height: 500px;
+    }
+}
+
+@media (min-width:992px) {
+    .vertically-inverted {
+        transform: translateY(-50%)
+    }
+    .navigation-menu::before{
+        background: white;
+        height: 40px;
+    }
+    .nav-item:not(:last-child)>.nav-link {
+        border-right: solid 0 transparent;
+    }
+    .detail-section{
+        min-height: 500px;
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        max-width: 1200px
+    }
+
+    .vertically-inverted {
+        transform: translateY(-50%);
+    }
+
+    .navigation-menu::before{
+        background: var(--light);
+        height: 45px;
+    }
+
+    .nav-item:not(:last-child)>.nav-link {
+        border-right: solid 1px var(--primary);
+    }
+    .detail-section{
+        min-height: 450px;
+    }
+}</style>
+
+<head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body class="bg-light">
+    <header class="col-12 bg-gradient text-white py-1">
+        <div class="container flex-row d-flex">
+            <p class="mb-0">Need help with your booking? Call 0808888288 or 014700000</p>
+            <div class="col-1 ml-auto justify-content-around d-flex align-items-center">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar navbar-expand-xl navbar-light bg-white d-flex flex-row p-0">
+        <div class="d-flex flex-column col px-0">
+            <div class="container py-2">
+                    <div class="row col-12 py-4 px-0">
+                            <div class="col-12 px-0 d-flex flex-row">
+                                <a class="navbar-brand" href="#">
+                                    <img src="./img/logo.svg" alt="" srcset="">
+                                </a>
+                                <button class="navbar-toggler d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#menu"
+                                    aria-controls="menu" aria-expanded="false" aria-label="toggle menu">
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                                <form class="form-inline my-2 my-lg-0 col-6 ml-auto px-0 d-none d-lg-flex">
+                                    <input class="form-control form-control-lg mr-sm-2 rounded-corners col-12" type="text"
+                                        placeholder="Search for a Service, Spa or Location">
+                                </form>
+                            </div>
+                        </div>
+            </div>
+            <div class="container navigation-menu">
+                    <div class="row col px-0 py-1">
+                            <div class="collapse navbar-collapse col px-0" id="menu">
+                                <ul class="navbar-nav col px-0 mt-2 mt-lg-0 justify-content-between">
+                                    <li class="nav-item active">
+                                        <a class="nav-link py-0" href="#">Home <span class="sr-only">(current)</span></a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link py-0" href="#">haircare</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link py-0" href="#">massage</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link py-0" href="#">skin care</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link py-0" href="#">salon</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link py-0" href="#">beauty services</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link py-0" href="#">gym & fitness</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link py-0" href="#">make up</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link py-0" href="#">manicure</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link py-0" href="#">pedicure</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link py-0" href="#">exfoliation</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+            </div>
+        </div>
+
+        </div>
+    </nav>
+    <section id="hero">
+        <div class="header-lg mt-2 d-flex align-items-center" style="background-image: url('./img/jumbo-header.png')">
             <div class="container">
                 <div class="col-12 text-white text-center">
                     <h1 class="f-w-600 text-shadow text-capitalize display-4">book spa sessions online across nigeria</h1>
@@ -10,32 +362,53 @@
                 </div>
             </div>
         </div>
-        <div class="col-8 mx-auto bg-white py-1 vertically-inverted shadow-sm">
+        <div class="col-12 col-lg-8 mx-auto bg-white py-3 vertically-inverted shadow-sm">
             <div class="row">
                 <div class="col border-right text-center border-secondary">
-                    <div class="col p-5">
+                    <div class="col p-4">
                         <img src="./img/powder.svg" width="50%" class="" alt="" srcset="">
-                        <p class="text-capitalize mt-3 text-secondary">SSSSSS</p>
+                        <p class="text-uppercase f-w-400 mt-3 text-secondary">matt effect</p>
                     </div>
                 </div>
                 <div class="col border-right text-center border-secondary">
-                    <div class="col p-5">
-                        <img src="./img/powder.svg" width="50%" class="" alt="" srcset="">
-                        <p class="text-capitalize mt-3 text-secondary">SSSSSS</p>
+                    <div class="col p-4">
+                        <img src="./img/shower.svg" width="50%" class="" alt="" srcset="">
+                        <p class="text-uppercase f-w-400 mt-3 text-secondary">sauna ready</p>
                     </div>
                 </div>
                 <div class="col border-right text-center border-secondary">
-                    <div class="col p-5">
-                        <img src="./img/powder.svg" width="50%" class="" alt="" srcset="">
-                        <p class="text-capitalize mt-3 text-secondary">SSSSSS</p>
+                    <div class="col p-4">
+                        <img src="./img/aloe-vera.svg" width="50%" class="" alt="" srcset="">
+                        <p class="text-uppercase f-w-400 mt-3 text-secondary">relax zones</p>
                     </div>
                 </div>
-                <div class="col border-right text-center">
-                    <div class="col p-5">
-                        <img src="./img/powder.svg" width="50%" class="" alt="" srcset="">
-                        <p class="text-capitalize mt-3 text-secondary">SSSSSS</p>
+                <div class="col text-center">
+                    <div class="col p-4">
+                        <img src="./img/facial-treatment.svg" width="50%" class="" alt="" srcset="">
+                        <p class="text-uppercase f-w-400 mt-3 text-secondary">natural mask</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <section id="hair-and-nails">
+        <div class="h-100 detail-section col">
+            <div class="row">
+                <div class="col h-100 bg-danger">\b</div>
+                <div class="col-7 h-100 bg-dark">\b</div>
+                <div class="col h-100 bg-gradient">\b</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

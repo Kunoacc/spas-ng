@@ -8,121 +8,515 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="./css/bootstrap.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a"
+        crossorigin="anonymous"></script>
+    <!-- <link rel="stylesheet" href="./css/utilities.css"> -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
-<body>
-    <header class="col-12 bg-gradient text-white">
+<body class="bg-light">
+    <header class="col-12 bg-gradient text-white py-1">
         <div class="container flex-row d-flex">
-                <p class="mb-0">Need help with your booking? Call 0808888288 or 014700000</p>
-                <div class="col-1 ml-auto justify-content-around d-flex align-items-center">
-                    <i class="fab fa-facebook-f"></i>
-                    <i class="fab fa-twitter"></i>
-                </div>
+            <p class="mb-0">Need help with your booking? Call 0808888288 or 014700000</p>
+            <div class="col-4 col-md-2 col-lg-1 ml-auto justify-content-around d-flex align-items-center">
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+            </div>
         </div>
     </header>
-    <nav class="navbar navbar-expand-xl navbar-light bg-white d-flex flex-row">
-        <div class="container d-flex flex-column">
-            <div class="row col-12 py-4 px-0">
-                <div class="col-12 px-0 d-flex flex-row">
-                    <a class="navbar-brand" href="#">
-                        <img src="./img/logo.svg" alt="" srcset="">
-                    </a>
-                    <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#menu"
-                        aria-controls="menu" aria-expanded="false" aria-label="toggle menu"></button>
-                    <form class="form-inline my-2 my-lg-0 col-6 ml-auto px-0">
-                        <input class="form-control form-control-lg mr-sm-2 rounded-corners col-12" type="text"
-                            placeholder="Search for a Service, Spa or Location">
-                    </form>
+
+    <nav class="navbar navbar-expand-xl navbar-light bg-white d-flex flex-row p-0">
+        <div class="d-flex flex-column col px-2 px-sm-0">
+            <div class="container py-2">
+                <div class="row col-12 py-4 px-2 px-sm-0">
+                    <div class="col-12 px-2 px-sm-0 d-flex flex-row">
+                        <a class="navbar-brand" href="#">
+                            <img src="./img/logo.svg" alt="" srcset="">
+                        </a>
+                        <button class="navbar-toggler d-xl-none ml-auto" type="button" data-toggle="collapse"
+                            data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="toggle menu">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <form class="form-inline my-2 my-lg-0 col-6 ml-auto px-0 d-none d-xl-flex">
+                            <input class="form-control form-control-lg mr-sm-2 rounded-corners col-12" type="text"
+                                placeholder="Search for a Service, Spa or Location">
+                        </form>
+                    </div>
                 </div>
             </div>
-            <div class="row col px-0">
-                <div  class="collapse navbar-collapse col px-0" id="menu">
-                    <ul class="navbar-nav col px-0 mt-2 mt-lg-0 justify-content-between">
-                        <li class="nav-item active">
-                            <a class="nav-link py-0" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link py-0" href="#">haircare</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link py-0" href="#">massage</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link py-0" href="#">skin care</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link py-0" href="#">salon</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link py-0" href="#">beauty services</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link py-0" href="#">gym & fitness</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link py-0" href="#">make up</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link py-0" href="#">manicure</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link py-0" href="#">pedicure</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link py-0" href="#">exfoliation</a>
-                        </li>
-                    </ul>
+            <div class="container navigation-menu">
+                <div class="row col px-2 px-sm-0 py-1">
+                    <div class="collapse navbar-collapse col px-0" id="menu">
+                        <ul class="navbar-nav col px-2 px-sm-0 my-2 mt-lg-0 justify-content-between">
+                            <li class="nav-item active">
+                                <a class="nav-link py-0" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-0" href="#">haircare</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-0" href="#">massage</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-0" href="#">skin care</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-0" href="#">salon</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-0" href="#">beauty services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-0" href="#">gym & fitness</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-0" href="#">make up</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-0" href="#">manicure</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-0" href="#">pedicure</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link py-0" href="#">exfoliation</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
 
         </div>
     </nav>
+
     <section id="hero">
-            <div class="header-lg mt-5 d-flex align-items-center" style="background-image: url('./img/jumbo-header.png')">
-                <div class="container">
-                    <div class="col-12 text-white text-center">
-                        <h1 class="f-w-600 text-shadow text-capitalize display-4">book spa sessions online across nigeria</h1>
-                        <p class="h4 text-shadow">Search through 5,067 of the best beauty services and salons in Nigeria</p>
-                        <button class="btn btn-alternate btn-lg mt-5 rounded-corners px-5 py-3">
-                            <p class="h4 mb-0 text-capitalize">Explore popular spas</p>
+        <div class="header-lg d-flex align-items-center" style="background-image: url('./img/jumbo-header.png')">
+            <div class="container">
+                <div class="col-12 text-white text-center">
+                    <h1 class="f-w-600 text-shadow text-capitalize display-4">book spa sessions online across nigeria</h1>
+                    <p class="h4 text-shadow">Search through 5,067 of the best beauty services and salons in Nigeria</p>
+                    <button class="btn btn-alternate btn-lg mt-5 rounded-corners px-5 py-3">
+                        <p class="h4 mb-0 text-capitalize">Explore popular spas</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-lg-8 mx-auto bg-white py-3 vertically-inverted shadow-sm">
+            <div class="row">
+                <div class="col-6 col-sm border-right text-center border-secondary">
+                    <div class="col p-4">
+                        <img src="./img/powder.svg" width="50%" class="" alt="" srcset="">
+                        <p class="text-uppercase f-w-400 mt-3 text-secondary">matt effect</p>
+                    </div>
+                </div>
+                <div class="col-6 col-sm border-right text-center border-secondary">
+                    <div class="col p-4">
+                        <img src="./img/shower.svg" width="50%" class="" alt="" srcset="">
+                        <p class="text-uppercase f-w-400 mt-3 text-secondary">sauna ready</p>
+                    </div>
+                </div>
+                <div class="col-6 col-sm border-right text-center border-secondary">
+                    <div class="col p-4">
+                        <img src="./img/aloe-vera.svg" width="50%" class="" alt="" srcset="">
+                        <p class="text-uppercase f-w-400 mt-3 text-secondary">relax zones</p>
+                    </div>
+                </div>
+                <div class="col-6 col-sm text-center">
+                    <div class="col p-4">
+                        <img src="./img/facial-treatment.svg" width="50%" class="" alt="" srcset="">
+                        <p class="text-uppercase f-w-400 mt-3 text-secondary">natural mask</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="hair-and-nails" class="mt-5 mt-lg-0 mb-5">
+        <div class="detail-section container d-flex flex-column">
+            <div class="row flex-1 flex">
+                <div class="col-12 col-md d-flex flex-column">
+                    <div class="col mb-2 mb-md-3 justify-content-center text-center text-md-left d-flex flex-column d-md-block">
+                        <h2 class="text-primary">
+                            Hair and Nails
+                        </h2>
+                        <p>The best spa collection who offer the best hair and nails services in Lagos. Some more
+                            descriptive text goes here</p>
+                        <button class="btn btn-primary btn-lg">
+                            See More
                         </button>
                     </div>
+                    <div class="col mt-0 mt-md-3 bg-img position-relative d-flex" style="background-image: url('./img/spa-four.jpg')">
+                        <div class="position-absolute pin-b pin-l text-white p-3">
+                            <p class="font-bold mb-0">from &#8358;5000</p>
+                            <h4 class="text-shadow mb-0">George towns place</h4>
+                            <p class="mb-0">Sabo Yaba</p>
+                            <p class="mb-0 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md mt-3 mt-md-0 d-none d-md-flex">
+                    <div class="col-12 h-100 position-relative bg-img" style="background-image: url('./img/spa-img-one.png')">
+                        <div class="position-absolute pin-b pin-l text-white p-3">
+                            <p class="font-bold mb-0">from &#8358;5000</p>
+                            <h3 class="text-shadow mb-0">George towns place</h3>
+                            <p class="mb-0">Sabo Yaba</p>
+                            <p class="mb-0 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md mt-3 mt-md-0 d-flex d-md-none">
+                    <div class="col-12 d-flex position-relative bg-img" style="background-image: url('./img/spa-img-one.png')">
+                        <div class="position-absolute pin-b pin-l text-white p-3">
+                            <p class="font-bold mb-0">from &#8358;5000</p>
+                            <h3 class="text-shadow mb-0">George towns place</h3>
+                            <p class="mb-0">Sabo Yaba</p>
+                            <p class="mb-0 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md mt-3 mt-md-0 d-flex flex-row flex-md-column">
+                    <div class="col col-sm-6 col-md mb-0 mb-md-3 mr-2 mr-md-0 bg-img" style="background-image: url('./img/spa-three.jpg')">
+                        <div class="position-absolute pin-b pin-l text-white p-3">
+                            <p class="font-bold mb-0">from &#8358;5000</p>
+                            <h4 class="text-shadow mb-0">George towns place</h4>
+                            <p class="mb-0">Sabo Yaba</p>
+                            <p class="mb-0 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col col-sm-6 col-md mt-0 mt-md-3 ml-2 ml-md-0 bg-img" style="background-image: url('./img/spa-treatment.jpg')">
+                        <div class="position-absolute pin-b pin-l text-white p-3">
+                            <p class="font-bold mb-0">from &#8358;5000</p>
+                            <h4 class="text-shadow mb-0">George towns place</h4>
+                            <p class="mb-0">Sabo Yaba</p>
+                            <p class="mb-0 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-8 mx-auto bg-white py-1 vertically-inverted shadow-sm">
-                <div class="row">
-                    <div class="col border-right text-center border-secondary">
-                        <div class="col p-5">
-                            <img src="./img/powder.svg" width="50%" class="" alt="" srcset="">
-                            <p class="text-uppercase f-w-200 mt-3 text-secondary">matt effect</p>
+        </div>
+    </section>
+
+    <section id="relaxing-massage" class="mt-6 mb-5">
+        <div class="detail-section container d-flex flex-column">
+            <div class="row flex-1">
+                <div class="col-12 col-md d-flex flex-row flex-md-column">
+                    <div class="col col-sm-6 col-md mb-0 mb-md-3 mr-2 mr-md-0 bg-img d-flex" style="background-image: url('./img/spa.jpg')">
+                        <div class="position-absolute pin-b pin-l text-white p-3">
+                            <p class="font-bold mb-0">from &#8358;5000</p>
+                            <h4 class="text-shadow mb-0">George towns place</h4>
+                            <p class="mb-0">Sabo Yaba</p>
+                            <p class="mb-0 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
                         </div>
                     </div>
-                    <div class="col border-right text-center border-secondary">
-                        <div class="col p-5">
-                            <img src="./img/shower.svg" width="50%" class="" alt="" srcset="">
-                            <p class="text-uppercase f-w-200 mt-3 text-secondary">sauna ready</p>
+                    <div class="col mt-0 mt-md-3 bg-img position-relative d-flex" style="background-image: url('./img/spa-img-one.png')">
+                        <div class="position-absolute pin-b pin-l text-white p-3">
+                            <p class="font-bold mb-0">from &#8358;5000</p>
+                            <h4 class="text-shadow mb-0">George towns place</h4>
+                            <p class="mb-0">Sabo Yaba</p>
+                            <p class="mb-0 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
                         </div>
                     </div>
-                    <div class="col border-right text-center border-secondary">
-                        <div class="col p-5">
-                            <img src="./img/aloe-vera.svg" width="50%" class="" alt="" srcset="">
-                            <p class="text-uppercase f-w-200 mt-3 text-secondary">relax zones</p>
+                </div>
+                <div class="col-12 col-md mt-3 mt-md-0 d-none d-md-flex">
+                    <div class="col-12 h-100 position-relative bg-img" style="background-image: url('./img/spa-img-one.png')">
+                        <div class="position-absolute pin-b pin-l text-white p-3">
+                            <p class="font-bold mb-0">from &#8358;5000</p>
+                            <h3 class="text-shadow mb-0">George towns place</h3>
+                            <p class="mb-0">Sabo Yaba</p>
+                            <p class="mb-0 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
                         </div>
                     </div>
-                    <div class="col border-right text-center">
-                            <div class="col p-5">
-                                <img src="./img/facial-treatment.svg" width="50%" class="" alt="" srcset="">
-                                <p class="text-uppercase f-w-200 mt-3 text-secondary">natural mask</p>
+                </div>
+                <div class="col-12 col-md mt-3 mt-md-0 d-flex d-flex d-md-none">
+                    <div class="col-12 position-relative bg-img" style="background-image: url('./img/spa-img-one.png')">
+                        <div class="position-absolute pin-b pin-l text-white p-3">
+                            <p class="font-bold mb-0">from &#8358;5000</p>
+                            <h3 class="text-shadow mb-0">George towns place</h3>
+                            <p class="mb-0">Sabo Yaba</p>
+                            <p class="mb-0 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md mt-3 mt-md-0 d-flex flex-row flex-md-column">
+                    <div class="col mb-2 mb-md-3 justify-content-center text-center text-md-left d-flex flex-column d-md-block">
+                        <h2 class="text-primary">
+                            Relaxing Massage
+                        </h2>
+                        <p>Curated list of spas that offer the best massage in the country, Some more descriptive text
+                            goes here</p>
+                        <button class="btn btn-primary btn-lg">
+                            See More
+                        </button>
+                    </div>
+
+                    <div class="col col-sm-6 col-md mt-0 mt-md-3 ml-2 ml-md-0 bg-img" style="background-image: url('./img/spa-two.jpg')">
+                        <div class="position-absolute pin-b pin-l text-white p-3">
+                            <p class="font-bold mb-0">from &#8358;5000</p>
+                            <h4 class="text-shadow mb-0">George towns place</h4>
+                            <p class="mb-0">Sabo Yaba</p>
+                            <p class="mb-0 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="soothing-stones" class="mt-6 mb-6">
+        <div class="detail-section container d-flex flex-column">
+            <div class="row flex-1 flex">
+                <div class="col-12 col-md d-flex flex-row flex-md-column">
+                    <div class="col mb-2 mb-md-3 justify-content-center text-center text-md-left d-flex flex-column d-md-block order-last order-md-first">
+                        <h2 class="text-primary">
+                            Soothing Stones
+                        </h2>
+                        <p>Curated list of spas that offer the best massage in the country. Some more
+                            descriptive text goes here</p>
+                        <button class="btn btn-primary btn-lg">
+                            See More
+                        </button>
+                    </div>
+                    <div class="col mt-0 mt-md-3 bg-img position-relative d-flex" style="background-image: url('./img/spa-four.jpg')">
+                        <div class="position-absolute pin-b pin-l text-white p-3">
+                            <p class="font-bold mb-0">from &#8358;5000</p>
+                            <h4 class="text-shadow mb-0">George towns place</h4>
+                            <p class="mb-0">Sabo Yaba</p>
+                            <p class="mb-0 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md mt-3 mt-md-0 d-none d-md-flex">
+                    <div class="col-12 h-100 position-relative bg-img" style="background-image: url('./img/spa-img-one.png')">
+                        <div class="position-absolute pin-b pin-l text-white p-3">
+                            <p class="font-bold mb-0">from &#8358;5000</p>
+                            <h3 class="text-shadow mb-0">George towns place</h3>
+                            <p class="mb-0">Sabo Yaba</p>
+                            <p class="mb-0 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md mt-3 mt-md-0 d-flex d-md-none">
+                    <div class="col-12 d-flex position-relative bg-img" style="background-image: url('./img/spa-img-one.png')">
+                        <div class="position-absolute pin-b pin-l text-white p-3">
+                            <p class="font-bold mb-0">from &#8358;5000</p>
+                            <h3 class="text-shadow mb-0">George towns place</h3>
+                            <p class="mb-0">Sabo Yaba</p>
+                            <p class="mb-0 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md mt-3 mt-md-0 d-flex flex-row flex-md-column">
+                    <div class="col col-sm-6 col-md mb-0 mb-md-3 mr-2 mr-md-0 bg-img" style="background-image: url('./img/spa-three.jpg')">
+                        <div class="position-absolute pin-b pin-l text-white p-3">
+                            <p class="font-bold mb-0">from &#8358;5000</p>
+                            <h4 class="text-shadow mb-0">George towns place</h4>
+                            <p class="mb-0">Sabo Yaba</p>
+                            <p class="mb-0 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col col-sm-6 col-md mt-0 mt-md-3 ml-2 ml-md-0 bg-img" style="background-image: url('./img/spa-treatment.jpg')">
+                        <div class="position-absolute pin-b pin-l text-white p-3">
+                            <p class="font-bold mb-0">from &#8358;5000</p>
+                            <h4 class="text-shadow mb-0">George towns place</h4>
+                            <p class="mb-0">Sabo Yaba</p>
+                            <p class="mb-0 text-sm">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="email-subscribe">
+        <div class="header-md d-flex align-items-center" style="background-image: url('./img/jumbo-footer.png')">
+            <div class="container">
+                <div class="col-12 col-lg-8 mx-auto text-white text-center">
+                    <h1 class=" text-shadow mb-3">
+                        Get the latest Spa deals first
+                    </h1>
+                    <p class="h5 f-w-300 text-shadow">We curate the best prices weekly and send them to our subscribers. Enter
+                        your email below and never miss out.</p>
+                    <div class="col-12 mt-5">
+                        <div class="input-group mb-2 mr-sm-2">
+                            <input type="text" class="form-control form-control-lg rounded-corners-left" placeholder="Enter email address">
+                            <div class="input-group-append">
+                                <button class="btn btn-primary px-5 rounded-corners-right">
+                                    <p class="mb-0 h4">Subscribe</p>
+                                </button>
                             </div>
                         </div>
+                    </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-5 text-primary text-center text-md-left">
+                    <div class="col-12 col-md-10 px-0">
+                            <img src="img/logo.svg" alt="" srcset="">
+                            <p class="my-4">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Est reprehenderit neque deserunt fuga
+                                illo. Qui, sint molestias ratione harum perspiciatis officia commodi, odit possimus explicabo
+                                deserunt iure, deleniti mollitia obcaecati
+                            </p>
+                            <span style="font-size: 14px" class="d-none d-md-block">2017 &copy; Spas.ng All rights reserved.</span>
+                    </div>
+                </div>
+                <div class="col mt-4 mt-md-0 text-primary text-center text-md-left">
+                    <p class="h5 text-capitalize mb-4 f-w-400">quick navigation</p>
+                    <ul class="list-unstyled">
+                        <li class="mb-1">
+                            <a href="">About Us</a>
+                        </li>
+                        <li class="mb-1">
+                            <a href="">Contact Us</a>
+                        </li>
+                        <li class="mb-1">
+                            <a href="">FAQ</a>
+                        </li>
+                        <li class="mb-1">
+                            <a href="">How it Works</a>
+                        </li>
+                        <li class="mb-1">
+                            <a href="">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col mt-4 mt-md-0 text-center text-md-left text-primary">
+                        <p class="h5 text-capitalize mb-4 f-w-400">other links</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-1">
+                                <a href="">Terms and Conditions</a>
+                            </li>
+                            <li class="mb-1">
+                                <a href="">Return Refunds & D&C Policy</a>
+                            </li>
+                            <li class="mb-1">
+                                <a href="">Login</a>
+                            </li>
+                            <li class="mb-1">
+                                <a href="">Register</a>
+                            </li>
+                            <li class="mb-1">
+                                <a href="">Blog</a>
+                            </li>
+                        </ul>
+                </div>
+                <div class="col mt-4 mt-md-0 text-center text-md-left text-primary">
+                        <p class="h5 text-capitalize mb-4 f-w-400">Social Media</p>
+                        <ul class="list-unstyled">
+                            <li class="mb-1">
+                                <a href="">Facebook</a>
+                            </li>
+                            <li class="mb-1">
+                                <a href="">Twitter</a>
+                            </li>
+                            <li class="mb-1">
+                                <a href="">Instagram</a>
+                            </li>
+                        </ul>
+                </div>
+                <div class="col-12 mt-3 mb-2 d-block d-md-none text-center text-primary">
+                        <span style="font-size: 14px">2017 &copy; Spas.ng All rights reserved.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

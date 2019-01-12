@@ -5,7 +5,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 :root {
-  --blue: #007bff;
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
@@ -18,7 +17,6 @@
   --white: #fff;
   --gray: #6c757d;
   --gray-dark: #343a40;
-  --primary: #007bff;
   --secondary: #6c757d;
   --success: #28a745;
   --info: #17a2b8;
@@ -166,7 +164,7 @@ sup {
 }
 
 a {
-  color: #007bff;
+  color: var(--main);
   text-decoration: none;
   background-color: transparent
 }
@@ -2730,14 +2728,14 @@ fieldset:disabled a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff
+  background-color: var(--main);
+  border-color: var(--main)
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc
+  background-color: var(--accent);
+  border-color: var(--accent);
 }
 
 .btn-primary.focus,
@@ -2748,15 +2746,15 @@ fieldset:disabled a.btn {
 .btn-primary.disabled,
 .btn-primary:disabled {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff
+  background-color: var(--main);
+  border-color: var(--main)
 }
 
 .btn-primary:not(:disabled):not(.disabled).active,
 .btn-primary:not(:disabled):not(.disabled):active,
 .show>.btn-primary.dropdown-toggle {
   color: #fff;
-  background-color: #0062cc;
+  background-color: var(--primary);
   border-color: #005cbf
 }
 
@@ -3033,14 +3031,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-outline-primary {
-  color: #007bff;
-  border-color: #007bff
+  color: var(--main);
+  border-color: var(--main)
 }
 
 .btn-outline-primary:hover {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff
+  background-color: var(--main);
+  border-color: var(--main)
 }
 
 .btn-outline-primary.focus,
@@ -3050,7 +3048,7 @@ fieldset:disabled a.btn {
 
 .btn-outline-primary.disabled,
 .btn-outline-primary:disabled {
-  color: #007bff;
+  color: var(--main);
   background-color: transparent
 }
 
@@ -3058,8 +3056,8 @@ fieldset:disabled a.btn {
 .btn-outline-primary:not(:disabled):not(.disabled):active,
 .show>.btn-outline-primary.dropdown-toggle {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff
+  background-color: var(--main);
+  border-color: var(--main)
 }
 
 .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
@@ -3322,7 +3320,7 @@ fieldset:disabled a.btn {
 
 .btn-link {
   font-weight: 400;
-  color: #007bff
+  color: var(--main)
 }
 
 .btn-link:hover {
@@ -3647,7 +3645,7 @@ input[type=submit].btn-block {
 .dropdown-item:active {
   color: #fff;
   text-decoration: none;
-  background-color: #007bff
+  background-color: var(--main)
 }
 
 .dropdown-item.disabled,
@@ -4023,8 +4021,8 @@ input[type=submit].btn-block {
 
 .custom-control-input:checked~.custom-control-label::before {
   color: #fff;
-  border-color: #007bff;
-  background-color: #007bff
+  border-color: var(--main);
+  background-color: var(--main)
 }
 
 .custom-control-input:focus~.custom-control-label::before {
@@ -4090,8 +4088,8 @@ input[type=submit].btn-block {
 }
 
 .custom-checkbox .custom-control-input:indeterminate~.custom-control-label::before {
-  border-color: #007bff;
-  background-color: #007bff
+  border-color: var(--main);
+  background-color: var(--main)
 }
 
 .custom-checkbox .custom-control-input:indeterminate~.custom-control-label::after {
@@ -4319,7 +4317,7 @@ input[type=submit].btn-block {
   width: 1rem;
   height: 1rem;
   margin-top: -.25rem;
-  background-color: #007bff;
+  background-color: var(--main);
   border: 0;
   border-radius: 1rem;
   transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
@@ -4350,7 +4348,7 @@ input[type=submit].btn-block {
 .custom-range::-moz-range-thumb {
   width: 1rem;
   height: 1rem;
-  background-color: #007bff;
+  background-color: var(--main);
   border: 0;
   border-radius: 1rem;
   transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
@@ -4384,7 +4382,7 @@ input[type=submit].btn-block {
   margin-top: 0;
   margin-right: .2rem;
   margin-left: .2rem;
-  background-color: #007bff;
+  background-color: var(--main);
   border: 0;
   border-radius: 1rem;
   transition: background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
@@ -4528,7 +4526,7 @@ input[type=submit].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show>.nav-link {
   color: #fff;
-  background-color: #007bff
+  background-color: var(--main)
 }
 
 .nav-fill .nav-item {
@@ -5335,7 +5333,7 @@ input[type=submit].btn-block {
   padding: .5rem .75rem;
   margin-left: -1px;
   line-height: 1.25;
-  color: #007bff;
+  color: var(--main);
   background-color: #fff;
   border: 1px solid #dee2e6
 }
@@ -5372,8 +5370,8 @@ input[type=submit].btn-block {
 .page-item.active .page-link {
   z-index: 1;
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff
+  background-color: var(--main);
+  border-color: var(--main)
 }
 
 .page-item.disabled .page-link {
@@ -5450,7 +5448,7 @@ a.badge:hover {
 
 .badge-primary {
   color: #fff;
-  background-color: #007bff
+  background-color: var(--main)
 }
 
 a.badge-primary:focus,
@@ -5735,7 +5733,7 @@ a.badge-dark:hover {
   color: #fff;
   text-align: center;
   white-space: nowrap;
-  background-color: #007bff;
+  background-color: var(--main);
   transition: width .6s ease
 }
 
@@ -5830,8 +5828,8 @@ a.badge-dark:hover {
 .list-group-item.active {
   z-index: 2;
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff
+  background-color: var(--main);
+  border-color: var(--main)
 }
 
 .list-group-flush .list-group-item {
@@ -6883,7 +6881,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #007bff !important
+  background-color: var(--main) !important
 }
 
 a.bg-primary:focus,
@@ -7019,7 +7017,7 @@ button.bg-dark:hover {
 }
 
 .border-primary {
-  border-color: #007bff !important
+  border-color: var(--main) !important
 }
 
 .border-secondary {
@@ -10757,7 +10755,7 @@ button.bg-dark:hover {
 }
 
 .text-primary {
-  color: #007bff !important
+  color: var(--main) !important
 }
 
 a.text-primary:focus,
