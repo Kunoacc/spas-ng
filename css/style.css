@@ -77,8 +77,12 @@
     font-weight: 600;
 }
 
-[class*=secondary]:not(*.text-secondary) {
-    color: var(--secondary);
+.text-secondary{
+    color: var(--secondary) !important;
+}
+
+.border-secondary{
+    border-color: var(--secondary) !important;
 }
 
 .nav-item:not(:last-child)>.nav-link {
